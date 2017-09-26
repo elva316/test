@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- because here we are show a specific user, so we dont need a loop  -->
+    <p>User: {{ number }}</p>
+    <p>Full Name: {{first_name}}{{last_name}}</p>
+    <p>Email: {{ email }}</p>
+    <p>Created At: {{ created_at }}</p>
+
+    <a href="#">Edit</a>
+    <!-- <a href="users/{{ user.id }}/destroy">Delete</a> -->
+    <a href="destroy">Delete</a>
+  </body>
+</html>

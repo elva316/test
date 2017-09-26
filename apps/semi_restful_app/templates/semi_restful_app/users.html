@@ -1,0 +1,43 @@
+{{ request.session.attempt  }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {%load staticfiles%}
+ <link rel="stylesheet" type="text/css" href="{% static 'semi_restful_app/style.css' %}">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ <title></title>
+    <title></title>
+  </head>
+  <body>
+
+      <h1>User</h1>
+    <table>
+      <tr>
+        <th class='width' >Id</th>
+        <th class='width'>Full Name</th>
+        <th class='width'>Email</th>
+        <th class='width'>Created At</th>
+        <th class='width'>Actions</th>
+      </tr>
+
+      {% for user in users %}
+      <tr>
+        <td class='width'>{{ user.id }}</td>
+        <td class='width'>{{ user.first_name }} {{ user.last_name }}</td>
+        <td class='width'>{{ user.email }}</td>
+        <td class='width'>{{ user.created_at }}</td>
+        <td class='width'><a class='a_tag' href="users/{{ user.id }}/">Show</a>
+                    <!-- this user id is match the about {{user.id}} -->
+                    <!-- you need user id(user id to track a user), in order to do show/delete/edit to specific user -->
+            <a class='a_tag' href="users/{{ user.id }}/edit">Edit</a>
+            <a class='a_tag' href="users/{{ user.id }}/destroy">Delete</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+    <br>
+
+
+    <a class='a_tag' href="/users/new">Add a new user</a>
+  </body>
+</html>

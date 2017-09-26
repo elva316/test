@@ -1,0 +1,14 @@
+th.width {
+  /*width: 150px;*/
+  border: 1px solid black;
+  /*text-align: center;*/
+  padding: 2px;
+}
+td.width {
+    /*width: 150px;*/
+    border: 1px solid black;
+    padding: 2px;
+}
+.a_tag {
+  text-decoration: underline;
+}
